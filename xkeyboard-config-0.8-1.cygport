@@ -1,0 +1,14 @@
+DESCRIPTION="X11 keyboard configuration database"
+HOMEPAGE="http://freedesktop.org/wiki/Software/XKeyboardConfig"
+SRC_URI="http://xlibs.freedesktop.org/xkbdesc/${P}.tar.bz2"
+
+CYGCONF_ARGS="--enable-xkbcomp-symlink --enable-compat-rules \
+	--with-xkb-base=/usr/share/X11/xkb --with-xkb-rules-symlink=xorg"
+
+src_install() {
+	cd ${B}
+	cyginstall
+
+	dodir /usr/lib/X11
+	dosym ../../share/X11/xkb /usr/lib/X11/xkb
+}

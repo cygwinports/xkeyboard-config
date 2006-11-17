@@ -1,0 +1,4 @@
+category: X11
+requires: xkbcomp
+sdesc: "X11 keyboard configuration database"
+ldesc: "The non-arch keyboard configuration database for X Window."
