@@ -6,14 +6,11 @@ Runtime requirements:
   xkbcomp-1.0.2-1
 
 Build requirements:
-  cygwin-1.5.22-1
-  autoconf2.5-2.60-1
-  automake1.9-1.9.6-1
-  binutils-20060817-1
-  cygport-0.2.6-1
-  gawk-3.1.5-2
-  gcc-core-3.4.4-1
-  libtool1.5-1.5.23a-1
+  autoconf2.5-2.63-1
+  automake1.10-1.10.1-1
+  cygport-0.4.1-1
+  gawk-3.1.6-1
+  gettext-devel-0.17-1
   make-3.81-1
   sed-4.1.5-1
 
@@ -26,21 +23,20 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack xkeyboard-config-0.8-X-src.tar.bz2
+  unpack xkeyboard-config-1.4-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./xkeyboard-config-0.8-X.cygport all
+  cygport ./xkeyboard-config-1.4-X.cygport all
 
 This will create:
-  /usr/src/xkeyboard-config-0.8-X-src.tar.bz2
-  /usr/src/xkeyboard-config-0.8-X.tar.bz2
+  /usr/src/xkeyboard-config-1.4-X-src.tar.bz2
+  /usr/src/xkeyboard-config-1.4-X.tar.bz2
 
 -------------------------------------------
 
 Files included in the binary package:
 
-  /usr/lib/X11/xkb
   /usr/share/X11/xkb/compat.dir
   /usr/share/X11/xkb/compat/README
   /usr/share/X11/xkb/compat/accessx
@@ -57,11 +53,11 @@ Files included in the binary package:
   /usr/share/X11/xkb/compat/misc
   /usr/share/X11/xkb/compat/mousekeys
   /usr/share/X11/xkb/compat/norepeat
+  /usr/share/X11/xkb/compat/olpc
   /usr/share/X11/xkb/compat/pc
   /usr/share/X11/xkb/compat/pc98
   /usr/share/X11/xkb/compat/xfree86
   /usr/share/X11/xkb/compat/xtest
-  /usr/share/X11/xkb/compiled
   /usr/share/X11/xkb/geometry.dir
   /usr/share/X11/xkb/geometry/README
   /usr/share/X11/xkb/geometry/amiga
@@ -73,8 +69,8 @@ Files included in the binary package:
   /usr/share/X11/xkb/geometry/digital_vndr/unix
   /usr/share/X11/xkb/geometry/everex
   /usr/share/X11/xkb/geometry/fujitsu
+  /usr/share/X11/xkb/geometry/hhk
   /usr/share/X11/xkb/geometry/hp
-  /usr/share/X11/xkb/geometry/ibm_vndr/thinkpad
   /usr/share/X11/xkb/geometry/keytronic
   /usr/share/X11/xkb/geometry/kinesis
   /usr/share/X11/xkb/geometry/macintosh
@@ -87,6 +83,7 @@ Files included in the binary package:
   /usr/share/X11/xkb/geometry/sgi_vndr/indy
   /usr/share/X11/xkb/geometry/sony
   /usr/share/X11/xkb/geometry/sun
+  /usr/share/X11/xkb/geometry/thinkpad
   /usr/share/X11/xkb/geometry/winbook
   /usr/share/X11/xkb/keycodes.dir
   /usr/share/X11/xkb/keycodes/README
@@ -100,7 +97,6 @@ Files included in the binary package:
   /usr/share/X11/xkb/keycodes/hp
   /usr/share/X11/xkb/keycodes/ibm
   /usr/share/X11/xkb/keycodes/macintosh
-  /usr/share/X11/xkb/keycodes/powerpcps2
   /usr/share/X11/xkb/keycodes/sgi_vndr/indigo
   /usr/share/X11/xkb/keycodes/sgi_vndr/indy
   /usr/share/X11/xkb/keycodes/sgi_vndr/iris
@@ -155,8 +151,9 @@ Files included in the binary package:
   /usr/share/X11/xkb/rules/base
   /usr/share/X11/xkb/rules/base.lst
   /usr/share/X11/xkb/rules/base.xml
-  /usr/share/X11/xkb/rules/sgi
-  /usr/share/X11/xkb/rules/sun
+  /usr/share/X11/xkb/rules/evdev
+  /usr/share/X11/xkb/rules/evdev.lst
+  /usr/share/X11/xkb/rules/evdev.xml
   /usr/share/X11/xkb/rules/xfree98
   /usr/share/X11/xkb/rules/xkb.dtd
   /usr/share/X11/xkb/rules/xorg
@@ -180,13 +177,15 @@ Files included in the binary package:
   /usr/share/X11/xkb/symbols/be
   /usr/share/X11/xkb/symbols/bg
   /usr/share/X11/xkb/symbols/br
+  /usr/share/X11/xkb/symbols/braille
   /usr/share/X11/xkb/symbols/bt
   /usr/share/X11/xkb/symbols/by
   /usr/share/X11/xkb/symbols/ca
   /usr/share/X11/xkb/symbols/capslock
+  /usr/share/X11/xkb/symbols/cd
   /usr/share/X11/xkb/symbols/ch
+  /usr/share/X11/xkb/symbols/cn
   /usr/share/X11/xkb/symbols/compose
-  /usr/share/X11/xkb/symbols/cs
   /usr/share/X11/xkb/symbols/ctrl
   /usr/share/X11/xkb/symbols/cz
   /usr/share/X11/xkb/symbols/de
@@ -198,6 +197,7 @@ Files included in the binary package:
   /usr/share/X11/xkb/symbols/ee
   /usr/share/X11/xkb/symbols/epo
   /usr/share/X11/xkb/symbols/es
+  /usr/share/X11/xkb/symbols/et
   /usr/share/X11/xkb/symbols/eurosign
   /usr/share/X11/xkb/symbols/fi
   /usr/share/X11/xkb/symbols/fo
@@ -207,6 +207,7 @@ Files included in the binary package:
   /usr/share/X11/xkb/symbols/gb
   /usr/share/X11/xkb/symbols/ge
   /usr/share/X11/xkb/symbols/gh
+  /usr/share/X11/xkb/symbols/gn
   /usr/share/X11/xkb/symbols/gr
   /usr/share/X11/xkb/symbols/group
   /usr/share/X11/xkb/symbols/hp_vndr/us
@@ -216,6 +217,7 @@ Files included in the binary package:
   /usr/share/X11/xkb/symbols/il
   /usr/share/X11/xkb/symbols/in
   /usr/share/X11/xkb/symbols/inet
+  /usr/share/X11/xkb/symbols/iq
   /usr/share/X11/xkb/symbols/ir
   /usr/share/X11/xkb/symbols/is
   /usr/share/X11/xkb/symbols/it
@@ -223,6 +225,8 @@ Files included in the binary package:
   /usr/share/X11/xkb/symbols/keypad
   /usr/share/X11/xkb/symbols/kg
   /usr/share/X11/xkb/symbols/kh
+  /usr/share/X11/xkb/symbols/kpdl
+  /usr/share/X11/xkb/symbols/kr
   /usr/share/X11/xkb/symbols/kz
   /usr/share/X11/xkb/symbols/la
   /usr/share/X11/xkb/symbols/latam
@@ -232,6 +236,7 @@ Files included in the binary package:
   /usr/share/X11/xkb/symbols/lk
   /usr/share/X11/xkb/symbols/lt
   /usr/share/X11/xkb/symbols/lv
+  /usr/share/X11/xkb/symbols/ma
   /usr/share/X11/xkb/symbols/macintosh_vndr/apple
   /usr/share/X11/xkb/symbols/macintosh_vndr/ch
   /usr/share/X11/xkb/symbols/macintosh_vndr/de
@@ -242,28 +247,36 @@ Files included in the binary package:
   /usr/share/X11/xkb/symbols/macintosh_vndr/gb
   /usr/share/X11/xkb/symbols/macintosh_vndr/is
   /usr/share/X11/xkb/symbols/macintosh_vndr/it
+  /usr/share/X11/xkb/symbols/macintosh_vndr/latam
   /usr/share/X11/xkb/symbols/macintosh_vndr/nl
   /usr/share/X11/xkb/symbols/macintosh_vndr/no
   /usr/share/X11/xkb/symbols/macintosh_vndr/pt
   /usr/share/X11/xkb/symbols/macintosh_vndr/se
   /usr/share/X11/xkb/symbols/macintosh_vndr/us
   /usr/share/X11/xkb/symbols/mao
+  /usr/share/X11/xkb/symbols/me
   /usr/share/X11/xkb/symbols/mk
   /usr/share/X11/xkb/symbols/mm
   /usr/share/X11/xkb/symbols/mn
   /usr/share/X11/xkb/symbols/mt
   /usr/share/X11/xkb/symbols/mv
+  /usr/share/X11/xkb/symbols/nbsp
   /usr/share/X11/xkb/symbols/nec_vndr/jp
+  /usr/share/X11/xkb/symbols/ng
   /usr/share/X11/xkb/symbols/nl
   /usr/share/X11/xkb/symbols/no
+  /usr/share/X11/xkb/symbols/np
+  /usr/share/X11/xkb/symbols/olpc
   /usr/share/X11/xkb/symbols/pc
   /usr/share/X11/xkb/symbols/pk
   /usr/share/X11/xkb/symbols/pl
   /usr/share/X11/xkb/symbols/pt
   /usr/share/X11/xkb/symbols/ro
+  /usr/share/X11/xkb/symbols/rs
   /usr/share/X11/xkb/symbols/ru
   /usr/share/X11/xkb/symbols/se
   /usr/share/X11/xkb/symbols/sgi_vndr/jp
+  /usr/share/X11/xkb/symbols/shift
   /usr/share/X11/xkb/symbols/si
   /usr/share/X11/xkb/symbols/sk
   /usr/share/X11/xkb/symbols/sony_vndr/us
@@ -320,21 +333,50 @@ Files included in the binary package:
   /usr/share/X11/xkb/types/mousekeys
   /usr/share/X11/xkb/types/numpad
   /usr/share/X11/xkb/types/pc
-  /usr/share/X11/xkb/xkbcomp.exe
-  /usr/share/doc/Cygwin/xkeyboard-config-0.8.README
-  /usr/share/doc/xkeyboard-config-0.8/ABOUT-NLS
-  /usr/share/doc/xkeyboard-config-0.8/AUTHORS
-  /usr/share/doc/xkeyboard-config-0.8/COPYING
-  /usr/share/doc/xkeyboard-config-0.8/CREDITS
-  /usr/share/doc/xkeyboard-config-0.8/ChangeLog
-  /usr/share/doc/xkeyboard-config-0.8/INSTALL
-  /usr/share/doc/xkeyboard-config-0.8/NEWS
-  /usr/share/doc/xkeyboard-config-0.8/README
-  /usr/share/doc/xkeyboard-config-0.8/TODO
+  /usr/share/X11/xkb/xkbcomp
+  /usr/share/doc/xkeyboard-config-1.4/ABOUT-NLS
+  /usr/share/doc/xkeyboard-config-1.4/AUTHORS
+  /usr/share/doc/xkeyboard-config-1.4/COPYING
+  /usr/share/doc/xkeyboard-config-1.4/CREDITS
+  /usr/share/doc/xkeyboard-config-1.4/ChangeLog
+  /usr/share/doc/xkeyboard-config-1.4/NEWS
+  /usr/share/doc/xkeyboard-config-1.4/README
+  /usr/share/doc/xkeyboard-config-1.4/TODO
+  /usr/share/locale/af/LC_MESSAGES/xkeyboard-config.mo
+  /usr/share/locale/az/LC_MESSAGES/xkeyboard-config.mo
+  /usr/share/locale/bg/LC_MESSAGES/xkeyboard-config.mo
+  /usr/share/locale/cs/LC_MESSAGES/xkeyboard-config.mo
+  /usr/share/locale/da/LC_MESSAGES/xkeyboard-config.mo
+  /usr/share/locale/el/LC_MESSAGES/xkeyboard-config.mo
+  /usr/share/locale/en_GB/LC_MESSAGES/xkeyboard-config.mo
+  /usr/share/locale/es/LC_MESSAGES/xkeyboard-config.mo
+  /usr/share/locale/fi/LC_MESSAGES/xkeyboard-config.mo
+  /usr/share/locale/fr/LC_MESSAGES/xkeyboard-config.mo
+  /usr/share/locale/hu/LC_MESSAGES/xkeyboard-config.mo
+  /usr/share/locale/it/LC_MESSAGES/xkeyboard-config.mo
+  /usr/share/locale/ka/LC_MESSAGES/xkeyboard-config.mo
+  /usr/share/locale/ko/LC_MESSAGES/xkeyboard-config.mo
+  /usr/share/locale/nl/LC_MESSAGES/xkeyboard-config.mo
+  /usr/share/locale/ru/LC_MESSAGES/xkeyboard-config.mo
+  /usr/share/locale/rw/LC_MESSAGES/xkeyboard-config.mo
+  /usr/share/locale/sk/LC_MESSAGES/xkeyboard-config.mo
+  /usr/share/locale/sl/LC_MESSAGES/xkeyboard-config.mo
+  /usr/share/locale/sq/LC_MESSAGES/xkeyboard-config.mo
+  /usr/share/locale/sr/LC_MESSAGES/xkeyboard-config.mo
+  /usr/share/locale/sr@Latn/LC_MESSAGES/xkeyboard-config.mo
+  /usr/share/locale/sv/LC_MESSAGES/xkeyboard-config.mo
+  /usr/share/locale/tr/LC_MESSAGES/xkeyboard-config.mo
+  /usr/share/locale/uk/LC_MESSAGES/xkeyboard-config.mo
+  /usr/share/locale/vi/LC_MESSAGES/xkeyboard-config.mo
+  /usr/share/locale/zh_CN/LC_MESSAGES/xkeyboard-config.mo
+  /usr/share/locale/zh_TW/LC_MESSAGES/xkeyboard-config.mo
 
 ------------------
 
 Port Notes:
+
+----- version 1.4-1 -----
+Version bump.
 
 ----- version 0.8-1 -----
 Initial release for Cygwin.
