@@ -6,13 +6,13 @@ Runtime requirements:
   xkbcomp-1.0.2-1
 
 Build requirements:
-  autoconf2.5-2.63-1
-  automake1.10-1.10.1-1
-  cygport-0.4.1-1
-  gawk-3.1.6-1
-  gettext-devel-0.17-1
-  make-3.81-1
-  sed-4.1.5-1
+  autoconf2.5-2.63-10
+  automake1.10-1.10.2-10
+  cygport-0.9.7-1
+  gawk-3.1.6-2
+  gettext-devel-0.17-11
+  make-3.81-2
+  sed-4.1.5-2
 
 Canonical website:
   http://freedesktop.org/wiki/Software/XKeyboardConfig
@@ -23,15 +23,15 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack xkeyboard-config-1.4-X-src.tar.bz2
+  unpack xkeyboard-config-1.6-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./xkeyboard-config-1.4-X.cygport all
+  cygport ./xkeyboard-config-1.6-X.cygport all
 
 This will create:
-  /usr/src/xkeyboard-config-1.4-X-src.tar.bz2
-  /usr/src/xkeyboard-config-1.4-X.tar.bz2
+  /usr/src/xkeyboard-config-1.6-X-src.tar.bz2
+  /usr/src/xkeyboard-config-1.6-X.tar.bz2
 
 -------------------------------------------
 
@@ -177,7 +177,7 @@ Files included in the binary package:
   /usr/share/X11/xkb/symbols/be
   /usr/share/X11/xkb/symbols/bg
   /usr/share/X11/xkb/symbols/br
-  /usr/share/X11/xkb/symbols/braille
+  /usr/share/X11/xkb/symbols/brai
   /usr/share/X11/xkb/symbols/bt
   /usr/share/X11/xkb/symbols/by
   /usr/share/X11/xkb/symbols/ca
@@ -279,6 +279,7 @@ Files included in the binary package:
   /usr/share/X11/xkb/symbols/shift
   /usr/share/X11/xkb/symbols/si
   /usr/share/X11/xkb/symbols/sk
+  /usr/share/X11/xkb/symbols/sn
   /usr/share/X11/xkb/symbols/sony_vndr/us
   /usr/share/X11/xkb/symbols/srvr_ctrl
   /usr/share/X11/xkb/symbols/sun_vndr/cs
@@ -310,9 +311,12 @@ Files included in the binary package:
   /usr/share/X11/xkb/symbols/sun_vndr/us
   /usr/share/X11/xkb/symbols/sun_vndr/usb
   /usr/share/X11/xkb/symbols/sy
+  /usr/share/X11/xkb/symbols/terminate
   /usr/share/X11/xkb/symbols/th
   /usr/share/X11/xkb/symbols/tj
+  /usr/share/X11/xkb/symbols/tm
   /usr/share/X11/xkb/symbols/tr
+  /usr/share/X11/xkb/symbols/typo
   /usr/share/X11/xkb/symbols/ua
   /usr/share/X11/xkb/symbols/us
   /usr/share/X11/xkb/symbols/uz
@@ -334,28 +338,35 @@ Files included in the binary package:
   /usr/share/X11/xkb/types/numpad
   /usr/share/X11/xkb/types/pc
   /usr/share/X11/xkb/xkbcomp
-  /usr/share/doc/xkeyboard-config-1.4/ABOUT-NLS
-  /usr/share/doc/xkeyboard-config-1.4/AUTHORS
-  /usr/share/doc/xkeyboard-config-1.4/COPYING
-  /usr/share/doc/xkeyboard-config-1.4/CREDITS
-  /usr/share/doc/xkeyboard-config-1.4/ChangeLog
-  /usr/share/doc/xkeyboard-config-1.4/NEWS
-  /usr/share/doc/xkeyboard-config-1.4/README
-  /usr/share/doc/xkeyboard-config-1.4/TODO
+  /usr/share/doc/xkeyboard-config/AUTHORS
+  /usr/share/doc/xkeyboard-config/COPYING
+  /usr/share/doc/xkeyboard-config/CREDITS
+  /usr/share/doc/xkeyboard-config/ChangeLog
+  /usr/share/doc/xkeyboard-config/NEWS
+  /usr/share/doc/xkeyboard-config/README
+  /usr/share/doc/xkeyboard-config/TODO
   /usr/share/locale/af/LC_MESSAGES/xkeyboard-config.mo
   /usr/share/locale/az/LC_MESSAGES/xkeyboard-config.mo
   /usr/share/locale/bg/LC_MESSAGES/xkeyboard-config.mo
+  /usr/share/locale/ca/LC_MESSAGES/xkeyboard-config.mo
+  /usr/share/locale/crh/LC_MESSAGES/xkeyboard-config.mo
   /usr/share/locale/cs/LC_MESSAGES/xkeyboard-config.mo
   /usr/share/locale/da/LC_MESSAGES/xkeyboard-config.mo
+  /usr/share/locale/de/LC_MESSAGES/xkeyboard-config.mo
   /usr/share/locale/el/LC_MESSAGES/xkeyboard-config.mo
   /usr/share/locale/en_GB/LC_MESSAGES/xkeyboard-config.mo
+  /usr/share/locale/eo/LC_MESSAGES/xkeyboard-config.mo
   /usr/share/locale/es/LC_MESSAGES/xkeyboard-config.mo
   /usr/share/locale/fi/LC_MESSAGES/xkeyboard-config.mo
   /usr/share/locale/fr/LC_MESSAGES/xkeyboard-config.mo
   /usr/share/locale/hu/LC_MESSAGES/xkeyboard-config.mo
+  /usr/share/locale/id/LC_MESSAGES/xkeyboard-config.mo
   /usr/share/locale/it/LC_MESSAGES/xkeyboard-config.mo
   /usr/share/locale/ka/LC_MESSAGES/xkeyboard-config.mo
   /usr/share/locale/ko/LC_MESSAGES/xkeyboard-config.mo
+  /usr/share/locale/ky/LC_MESSAGES/xkeyboard-config.mo
+  /usr/share/locale/lt/LC_MESSAGES/xkeyboard-config.mo
+  /usr/share/locale/nb/LC_MESSAGES/xkeyboard-config.mo
   /usr/share/locale/nl/LC_MESSAGES/xkeyboard-config.mo
   /usr/share/locale/ru/LC_MESSAGES/xkeyboard-config.mo
   /usr/share/locale/rw/LC_MESSAGES/xkeyboard-config.mo
@@ -363,7 +374,6 @@ Files included in the binary package:
   /usr/share/locale/sl/LC_MESSAGES/xkeyboard-config.mo
   /usr/share/locale/sq/LC_MESSAGES/xkeyboard-config.mo
   /usr/share/locale/sr/LC_MESSAGES/xkeyboard-config.mo
-  /usr/share/locale/sr@Latn/LC_MESSAGES/xkeyboard-config.mo
   /usr/share/locale/sv/LC_MESSAGES/xkeyboard-config.mo
   /usr/share/locale/tr/LC_MESSAGES/xkeyboard-config.mo
   /usr/share/locale/uk/LC_MESSAGES/xkeyboard-config.mo
@@ -374,6 +384,9 @@ Files included in the binary package:
 ------------------
 
 Port Notes:
+
+----- version 1.6-1 -----
+Version bump.
 
 ----- version 1.4-1 -----
 Version bump.
