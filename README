@@ -6,9 +6,9 @@ Runtime requirements:
   xkbcomp-1.0.2-1
 
 Build requirements:
-  autoconf2.5-2.63-10
-  automake1.10-1.10.2-10
-  cygport-0.9.9-1
+  autoconf2.5-2.65-1
+  automake1.10-1.10.3-1
+  cygport-0.9.80-1
   gawk-3.1.7-1
   gettext-devel-0.17-11
   make-3.81-2
@@ -23,19 +23,22 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack xkeyboard-config-1.7-X-src.tar.bz2
+  unpack xkeyboard-config-1.8-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./xkeyboard-config-1.7-X.cygport all
+  cygport ./xkeyboard-config-1.8-X.cygport all
 
 This will create:
-  /usr/src/xkeyboard-config-1.7-X-src.tar.bz2
-  /usr/src/xkeyboard-config-1.7-X.tar.bz2
+  /usr/src/xkeyboard-config-1.8-X-src.tar.bz2
+  /usr/src/xkeyboard-config-1.8-X.tar.bz2
 
 -------------------------------------------
 
 Port Notes:
+
+----- version 1.8-1 -----
+Version bump.
 
 ----- version 1.7-1 -----
 Version bump for X11R7.5.
