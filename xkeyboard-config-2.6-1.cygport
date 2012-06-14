@@ -2,6 +2,7 @@ inherit xorg
 
 DESCRIPTION="X11 keyboard configuration database"
 HOMEPAGE="http://freedesktop.org/wiki/Software/XKeyboardConfig"
+SRC_URI="http://xorg.freedesktop.org/archive/individual/data/${PN}/${P}.tar.bz2"
 
 CYGCONF_ARGS="--enable-xkbcomp-symlink --enable-compat-rules \
 	--with-xkb-base=/usr/share/X11/xkb --with-xkb-rules-symlink=xorg"
