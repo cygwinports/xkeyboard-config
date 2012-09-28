@@ -1,8 +1,13 @@
-inherit xorg
-
-DESCRIPTION="X11 keyboard configuration database"
+NAME="xkeyboard-config"
+VERSION=2.7
+RELEASE=1
+CATEGORY="X11"
+SUMMARY="X11 keyboard configuration database"
+DESCRIPTION="The non-arch keyboard configuration database for the X Window System."
 HOMEPAGE="http://freedesktop.org/wiki/Software/XKeyboardConfig"
 SRC_URI="http://xorg.freedesktop.org/archive/individual/data/${PN}/${P}.tar.bz2"
+
+REQUIRES="xkbcomp"
 
 CYGCONF_ARGS="--enable-xkbcomp-symlink --enable-compat-rules \
 	--with-xkb-base=/usr/share/X11/xkb --with-xkb-rules-symlink=xorg"
