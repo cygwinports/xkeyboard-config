@@ -1,11 +1,11 @@
 NAME="xkeyboard-config"
-VERSION=2.7
+VERSION=2.8
 RELEASE=1
 CATEGORY="X11"
 SUMMARY="X11 keyboard configuration database"
 DESCRIPTION="The non-arch keyboard configuration database for the X Window System."
 HOMEPAGE="http://freedesktop.org/wiki/Software/XKeyboardConfig"
-SRC_URI="http://xorg.freedesktop.org/archive/individual/data/${PN}/${P}.tar.bz2"
+SRC_URI="http://xorg.freedesktop.org/archive/individual/data/${NAME}/${NAME}-${VERSION}.tar.bz2"
 
 REQUIRES="xkbcomp"
 
