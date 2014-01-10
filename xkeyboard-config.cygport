@@ -1,5 +1,5 @@
 NAME="xkeyboard-config"
-VERSION=2.9
+VERSION=2.10.1
 RELEASE=1
 CATEGORY="X11"
 SUMMARY="X11 keyboard configuration database"
