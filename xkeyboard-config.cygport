@@ -1,13 +1,17 @@
 NAME="xkeyboard-config"
-VERSION=2.10.1
+VERSION=2.11
 RELEASE=1
 CATEGORY="X11"
 SUMMARY="X11 keyboard configuration database"
 DESCRIPTION="The non-arch keyboard configuration database for the X Window System."
 HOMEPAGE="http://freedesktop.org/wiki/Software/XKeyboardConfig"
 SRC_URI="http://xorg.freedesktop.org/archive/individual/data/${NAME}/${NAME}-${VERSION}.tar.bz2"
+PATCH_URI="2.11-intltool.patch"
 
-REQUIRES="xkbcomp"
+ARCH=noarch
 
-CYGCONF_ARGS="--enable-xkbcomp-symlink --enable-compat-rules \
-	--with-xkb-base=/usr/share/X11/xkb --with-xkb-rules-symlink=xorg"
+CYGCONF_ARGS="
+	--enable-compat-rules
+	--with-xkb-base=/usr/share/X11/xkb
+	--with-xkb-rules-symlink=xorg
+"

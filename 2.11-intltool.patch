@@ -1,0 +1,14 @@
+--- origsrc/xkeyboard-config-2.11/configure.ac	2014-01-29 14:08:27.000000000 -0600
++++ src/xkeyboard-config-2.11/configure.ac	2014-04-01 17:05:50.624883000 -0500
+@@ -63,10 +63,7 @@ AM_CONDITIONAL(USE_COMPAT_RULES, test "x
+ # ****
+ # i18n
+ # ****
+-AC_PROG_INTLTOOL(0.30)
+-
+-AM_GNU_GETTEXT_VERSION([0.18.1])
+-AM_GNU_GETTEXT([external])
++AC_PROG_INTLTOOL(0.50)
+ 
+ GETTEXT_PACKAGE=xkeyboard-config
+ AC_SUBST(GETTEXT_PACKAGE)
