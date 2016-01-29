@@ -1,5 +1,5 @@
 NAME="xkeyboard-config"
-VERSION=2.14
+VERSION=2.17
 RELEASE=1
 CATEGORY="X11"
 SUMMARY="X11 keyboard configuration database"
@@ -9,6 +9,18 @@ SRC_URI="http://xorg.freedesktop.org/archive/individual/data/${NAME}/${NAME}-${V
 PATCH_URI="2.11-intltool.patch"
 
 ARCH=noarch
+
+PKG_NAMES="${NAME} ${NAME}-devel"
+xkeyboard_config_CONTENTS="
+	usr/share/doc/${NAME}/
+	usr/share/locale/*/LC_MESSAGES/xkeyboard-config.*
+	usr/share/man/man7/xkeyboard-config.7*
+	usr/share/X11/xkb/
+"
+xkeyboard_config_devel_REQUIRES=${NAME}
+xkeyboard_config_devel_CONTENTS="
+	usr/share/pkgconfig/xkeyboard-config.pc
+"
 
 CYGCONF_ARGS="
 	--enable-compat-rules
